@@ -1,0 +1,38 @@
+<div ng-controller="LessonCtrl">
+  <div ng-hide="answerVerb.answered">
+  <div>
+    <h1>{{word.word}}</h1>
+  </div>
+
+  <h3>{{word.translation}}</h3>
+
+  <form id="auxverbSelectForm" name="auxverbSelect" ng-init="answerVerb.auxverb='hat'">
+    <label class="answer-radiobtn">
+      <!-- <input type="radio" ng-model="answerVerb.auxVerb" value="hat" ng-checked="true"> -->
+      <input type="radio" ng-model="answerVerb.auxverb" value="hat">
+      hat
+    </label>
+    <label  class="answer-radiobtn">
+      <input type="radio" ng-model="answerVerb.auxverb" value="ist" >
+      ist
+    </label><br/>
+   </form>
+
+   <form name="answerInput">
+    <input type="text" name="answerPartizip" ng-model="answerVerb.partizip" ng-trim="true"
+            ng-init="answerVerb.partizip=''" class="answer-input" placeholder="Enter partizip II">
+    <div>
+      <a class="btn btn-primary main-btn" ng-click="checkAnswerVerb(answerVerb)">Verify</a>
+    </div>
+   </form>
+ </div>
+ <div ng-show="answerVerb.answered">
+   <div ng-show="answerVerb.correct" class="alert alert-success" role="alert">
+     Correct. Your answer is '{{answerVerb.auxverb}} {{answerVerb.partizip}}'
+   </div>
+   <div ng-hide="answerVerb.correct" class="alert alert-danger" role="alert">
+     Wrong. Your answer is '{{answerVerb.auxverb}} {{answerVerb.partizip}}',
+     correct answer is '{{word.auxverb}} {{word.partizip}}'
+   </div>
+ </div>
+</div>

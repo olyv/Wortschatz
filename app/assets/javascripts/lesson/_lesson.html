@@ -1,0 +1,8 @@
+<div ng-controller="LessonCtrl" id="slides_control" style="height: 350px">
+
+  <uib-carousel active="active">
+    <uib-slide ng-repeat="word in data" index="$index">
+      <div ng-include="getInclude(word.type)"></div>
+    </uib-slide>
+  </uib-carousel>
+</div>
