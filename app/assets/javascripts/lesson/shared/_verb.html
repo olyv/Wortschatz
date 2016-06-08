@@ -22,7 +22,7 @@
     <input type="text" name="answerPartizip" ng-model="answerVerb.partizip" ng-trim="true"
             ng-init="answerVerb.partizip=''" class="answer-input" placeholder="Enter partizip II">
     <div>
-      <a class="btn btn-primary main-btn" ng-click="checkAnswerVerb(answerVerb)">Verify</a>
+      <a class="btn btn-primary main-btn" ng-click="checkAnswerVerb(answerVerb); isLessonCompleted()">Verify</a>
     </div>
    </form>
  </div>

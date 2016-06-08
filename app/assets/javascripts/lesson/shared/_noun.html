@@ -25,7 +25,7 @@
     <input type="text" name="answerPlural" ng-model="answerNoun.plural" ng-trim="true"
             ng-init="answerNoun.plural=''" class="answer-input" placeholder="Enter plural form">
     <div>
-      <a class="btn btn-primary main-btn" ng-click="checkAnswerNoun(answerNoun)" >Verify</a>
+      <a class="btn btn-primary main-btn" ng-click="checkAnswerNoun(answerNoun); isLessonCompleted()" >Verify</a>
     </div>
    </form>
  </div>

@@ -82,10 +82,6 @@ ol.carousel-indicators {
 }
 
 .answer-icon {
-  /*margin-left: auto;
-  margin-right: auto;*/
-  /*margin: auto;*/
   display: inline-block;
-  /*display: table;*/
-margin:0 auto;
+  margin:0 auto;
 }

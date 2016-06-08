@@ -10,7 +10,7 @@
             ng-init="answerAdjective.translation=''" class="answer-input" placeholder="Enter translation">
     <div style="height: 20px"></div>
     <div>
-      <a class="btn btn-primary main-btn answer-btn" ng-click="checkAnswerAdjective(answerAdjective)">Verify</a>
+      <a class="btn btn-primary main-btn answer-btn" ng-click="checkAnswerAdjective(answerAdjective); isLessonCompleted()">Verify</a>
     </div>
    </form>
  </div>
