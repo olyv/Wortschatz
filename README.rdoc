@@ -1,4 +1,0 @@
-1. Install angular dependencies using command `bower install`
-2. Install ruby dependencies with `bundle isntall`
-3. Populate database using command `rake db:seed`
-4. Start application with `rails server`  
