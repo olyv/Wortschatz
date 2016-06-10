@@ -4,10 +4,6 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
-default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
 
 development:
   <<: *default
@@ -24,10 +20,23 @@ production:
   # <<: *default
   # database: db/production.sqlite3
   adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: mysql2_production
+  database:"<%=ENV['OPENSHIFT_APP_NAME']%>"
+  username: "<%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>"
+  password: "<%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>"
+  host:     <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
+  port:     <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
+
+defaults: &defaults
   pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  timeout: 5000
+  encoding: utf8
+  <<: *<%= ENV['RAILS_DB'] || "sqlite" %>
+
+development:
+  <<: *defaults
+
+test: &test
+  <<: *defaults
+
+production:
+  <<: *defaults
