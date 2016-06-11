@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wortschatz</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-app="wortschatzApp">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="#">
+          <img src='<%= image_url("ic_launcher.png") %>' alt="Icon">
+        </a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><font size="6" style="margin: 10px">Wortschatz</font></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="view-container">
+    <div ng-view class="view-frame"></div>
+  </div>
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5758ff4e6d58f64c"></script>
+</body>
+</html>
