@@ -5,11 +5,10 @@
 #   gem 'sqlite3'
 #
 
-defaults: &defaults
+default: &default
+  adapter: sqlite3
   pool: 5
   timeout: 5000
-  encoding: utf8
-  <<: *<%= ENV['RAILS_DB'] || "sqlite" %>
 
 development:
   <<: *default

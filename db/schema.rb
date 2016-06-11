@@ -14,13 +14,11 @@
 ActiveRecord::Schema.define(version: 20160530183844) do
 
   create_table "adjectives", force: :cascade do |t|
-    t.string "type"
     t.string "word"
     t.string "translation"
   end
 
   create_table "nouns", force: :cascade do |t|
-    t.string "type"
     t.string "word"
     t.string "translation"
     t.string "article"
@@ -28,7 +26,6 @@ ActiveRecord::Schema.define(version: 20160530183844) do
   end
 
   create_table "verbs", force: :cascade do |t|
-    t.string "type"
     t.string "word"
     t.string "translation"
     t.string "auxverb"
