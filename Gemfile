@@ -14,8 +14,6 @@ gem 'jbuilder' #, '~> 2.0'
 
 gem 'sprockets' #, '3.5.2'
 
-gem 'turbo-sprockets-rails3' #, '~> 0.3.14'
-
 gem 'angular-rails-templates'
 
 gem 'angular-ui-bootstrap-rails'

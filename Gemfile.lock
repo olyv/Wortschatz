@@ -130,9 +130,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
-    turbo-sprockets-rails3 (0.2.9)
-      railties (>= 3.1.0)
-      sprockets (>= 2.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.0)
@@ -156,7 +153,6 @@ DEPENDENCIES
   spring
   sprockets
   sqlite3
-  turbo-sprockets-rails3
   uglifier
 
 BUNDLED WITH
