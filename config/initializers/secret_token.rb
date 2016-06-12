@@ -1,0 +1,1 @@
+Wortschatz::Application.config.secret_key_base = 'ea72e997fc066592db19a2b6d827d0418cf38e3879b647b9e8a6486761923e187faaad3b924c0a1d6129d1152853eed4443a3a98d529c2d5e34a1232eceffddc'

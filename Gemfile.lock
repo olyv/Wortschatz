@@ -139,6 +139,7 @@ DEPENDENCIES
   jbuilder
   mysql2
   passenger (= 4.0.18)
+  rack (~> 1.6)
   rails (= 4.2.6)
   responders
   sass-rails

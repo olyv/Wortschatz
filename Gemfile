@@ -32,3 +32,5 @@ gem 'responders'
 gem 'spring',      :group => [:development]
 
 gem "passenger", "4.0.18" #, require: "phusion_passenger/rack_handler"
+
+gem 'rack', '~> 1.6'
