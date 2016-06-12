@@ -1,4 +1,4 @@
-INSERT INTO Nouns (word, plural, article, translation) VALUES
+INSERT INTO nouns (word, plural, article, translation) VALUES
 ('Hund', 'Hunde', 'der', 'собака'),
 ('Katze', 'Katzen', 'die', 'кошка'),
 ('Kind', 'Kinder', 'das', 'ребенок'),
