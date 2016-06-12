@@ -23,7 +23,8 @@ gem 'angular-ui-bootstrap-rails'
 # trying to add a post. This gem fixes that
 gem 'angular_rails_csrf'
 
-gem 'devise' #, '~> 3.4.0'
+gem 'responders'
+# gem 'devise' #, '~> 3.4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
