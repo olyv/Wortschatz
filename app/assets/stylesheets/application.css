@@ -16,6 +16,6 @@
 
  /**= require bootstrap/dist/css/bootstrap*/
 
-
+ *= require bootstrap.min
  *= require_tree .
  *= require_self
