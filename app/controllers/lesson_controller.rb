@@ -11,7 +11,7 @@ class LessonController < ApplicationController
   def new_lesson
     result_array = Array.new
 
-    @adjectives = Adjective.order("RANDOM()").limit(3)
+    @adjectives = Adjective.order("RAND()").limit(3)
     logger.info("Selected #{@adjectives.length} adjectives from DB")
     @adjectives.each do |item|
       json_string = JSON.parse(item.to_json)
