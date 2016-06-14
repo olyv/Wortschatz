@@ -10,8 +10,11 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  # Disable Rails's static asset server (Apache or nginx will already do this)
+  config.serve_static_assets = false
+
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
@@ -30,7 +33,7 @@ Rails.application.configure do
   config.assets.js_compressor = Uglifier.new(:mangle => false)
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
@@ -54,7 +57,8 @@ Rails.application.configure do
 
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
-
+  config.logger = Logger.new(STDOUT)
+  
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
