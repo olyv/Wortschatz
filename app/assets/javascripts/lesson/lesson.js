@@ -115,6 +115,5 @@ wortschatzApp.factory('lessonItems', function($q, $timeout, $http) {
             }, 5);
         }
     };
-    console.log(LessonItems)
     return LessonItems
 });
