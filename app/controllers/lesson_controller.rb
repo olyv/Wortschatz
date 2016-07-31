@@ -6,7 +6,7 @@ class LessonController < ApplicationController
   protect_from_forgery with: :exception
 
   logger = Logger.new(STDOUT)
-  logger.level = Logger::INFO
+  logger.level = Logger::ERROR
 
   def new_lesson
     result_array = Array.new
