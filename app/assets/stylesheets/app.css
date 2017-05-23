@@ -1,10 +1,10 @@
 /* common styles */
 
 a.main-btn {
-  width: 350px;
+  width: 80%;
   height: 40px;
   padding: 5px;
-  margin: 20px;
+  margin-top: 5px;
   font-size: 20px;
   color: white;
   background-color: #0066CC;
@@ -64,9 +64,10 @@ ol.carousel-indicators {
 }
 
 .answer-input {
-  width: 350px;
+  width: 65%;
   text-align: center;
   font-size: 20px;
+  margin: auto;
 }
 
 .answer-radiobtn {
@@ -74,14 +75,37 @@ ol.carousel-indicators {
 }
 
 .alert {
-  width: 500px;
   margin-left: auto;
   margin-right: auto;
   font-size: 20px;
-  /*vertical-align: middle;*/
 }
 
 .answer-icon {
   display: inline-block;
   margin:0 auto;
+}
+
+/*override bootstrap*/
+.navbar-brand {
+  padding-top: 15px;
+  font-size: 35px;
+  display: inline-block;
+}
+
+.navbar-nav > li > a {
+  padding-top: 0px;
+  line-height: 30px;
+}
+
+.badge {
+  width: auto;
+  height:80px;
+  border:1px solid white;
+  border-radius:6px;
+  box-sizing:border-box;
+  background-color: #FFF;
+}
+
+.badge:empty {
+    display: block;
 }

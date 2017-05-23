@@ -1,12 +1,12 @@
 <div ng-controller="LessonCtrl">
   <div ng-hide="answerNoun.answered">
   <div>
-    <h1>{{word.word}}</h1>
+    <h1 style="margin: 10px">{{word.word}}</h1>
   </div>
 
-  <h3>{{word.translation}}</h3>
+  <h3 style="margin: 10px">{{word.translation}}</h3>
 
-  <form id="articleSelectForm" name="articleSelect" ng-init="answerNoun.article='der'">
+  <form id="articleSelectForm" name="articleSelect" style="margin: auto" ng-init="answerNoun.article='der'">
     <label class="answer-radiobtn">
       <input type="radio" ng-model="answerNoun.article" value="der" ng-checked="true">
       der
@@ -22,19 +22,36 @@
    </form>
 
    <form name="answerInput">
-    <input type="text" name="answerPlural" ng-model="answerNoun.plural" ng-trim="true"
-            ng-init="answerNoun.plural=''" class="answer-input" placeholder="Enter plural form">
-    <div>
-      <a class="btn btn-primary main-btn" ng-click="checkAnswerNoun(answerNoun); isLessonCompleted()" >Verify</a>
-    </div>
+
+     <div class="row">
+       <div class="col-sm-3"></div>
+       <div class="col-sm-6">
+         <input type="text" name="answerPlural" ng-model="answerNoun.plural" ng-trim="true"
+                 ng-init="answerNoun.plural=''" class="answer-input" placeholder="Enter plural form">
+        <div style="height: 20px"></div>
+      </div>
+        <div class="col-sm-3"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 text-center">
+          <a class="btn btn-primary main-btn" ng-click="checkAnswerNoun(answerNoun); isLessonCompleted()" >Verify</a>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
    </form>
  </div>
+
  <div ng-show="answerNoun.answered">
    <div ng-show="answerNoun.correct" class="alert alert-success" role="alert">
-     Correct. Your answer is '{{answerNoun.article}}' and '{{answerNoun.plural}}'
+     Your answer is '{{answerNoun.article}}' and '{{answerNoun.plural}}'.
+     <br>
+     This is correct answer!
    </div>
    <div ng-hide="answerNoun.correct" class="alert alert-danger" role="alert">
-     Wrong. Your answer is '{{answerNoun.article}}' and '{{answerNoun.plural}}',
+     Your answer is '{{answerNoun.article}}' and '{{answerNoun.plural}}',
+     <br>
      correct answer is '{{word.article}}' and '{{word.plural}}'
    </div>
  </div>
