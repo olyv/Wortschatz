@@ -5,3 +5,6 @@
 5. Start application with `rails server -e development`
 
 rhc app create openshiftapp ruby-2.0 mysql-5.5 --from-code=https://github.com/olyv/wortschatz.git
+
+
+App is running under http://wortschatz-olyv.rhcloud.com/
