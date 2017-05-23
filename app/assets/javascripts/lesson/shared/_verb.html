@@ -41,16 +41,23 @@
  </div>
 
  <div ng-show="answerVerb.answered">
-   <div ng-show="answerVerb.correct" class="alert alert-success" role="alert">
-     Your answer is '{{answerVerb.auxverb}} {{answerVerb.partizip}}'.
-     <br>
-     This is correct answer!
+   <div class="row">
+     <div class="col-sm-4"></div>
+     <div class="col-sm-4 text-center">
+       <div ng-show="answerVerb.correct" class="alert alert-success" role="alert">
+         Your answer is '{{answerVerb.auxverb}} {{answerVerb.partizip}}'.
+         <br>
+         This is correct answer!
+       </div>
+       <!-- <div ng-hide="answerVerb.correct" class="alert alert-danger" role="alert"> -->
+         <div ng-hide="answerVerb.correct" class="alert alert-danger" role="alert">
+         Your answer is '{{answerVerb.auxverb}} {{answerVerb.partizip}}',
+         <br>
+         correct answer is '{{word.auxverb}} {{word.partizip}}'
+       </div>
+     </div>
+     <div class="col-sm-4"></div>
    </div>
-   <!-- <div ng-hide="answerVerb.correct" class="alert alert-danger" role="alert"> -->
-     <div ng-hide="answerVerb.correct" class="alert alert-danger" role="alert">
-     Your answer is '{{answerVerb.auxverb}} {{answerVerb.partizip}}',
-     <br>
-     correct answer is '{{word.auxverb}} {{word.partizip}}'
-   </div>
+
  </div>
 </div>

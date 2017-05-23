@@ -30,15 +30,20 @@
    </form>
  </div>
  <div ng-show="answerAdjective.answered">
-   <div ng-show="answerAdjective.correct" class="alert alert-success" role="alert">
-     Your answer is '{{answerAdjective.translation}}'.
-     <br>
-     This is correct answer!
+   <div class="col-sm-4"></div>
+   <div class="col-sm-4 text-center">
+     <div ng-show="answerAdjective.correct" class="alert alert-success" role="alert">
+       Your answer is '{{answerAdjective.translation}}'.
+       <br>
+       This is correct answer!
+     </div>
+     <div ng-hide="answerAdjective.correct" class="alert alert-danger" role="alert">
+           Your answer is '{{answerAdjective.translation}}',
+           <br>
+           correct answer is '{{word.translation}}'
+     </div>
    </div>
-   <div ng-hide="answerAdjective.correct" class="alert alert-danger" role="alert">
-         Your answer is '{{answerAdjective.translation}}',
-         <br>
-         correct answer is '{{word.translation}}'
-   </div>
+   <div class="col-sm-4"></div>
+
  </div>
 </div>

@@ -44,15 +44,21 @@
  </div>
 
  <div ng-show="answerNoun.answered">
-   <div ng-show="answerNoun.correct" class="alert alert-success" role="alert">
-     Your answer is '{{answerNoun.article}}' and '{{answerNoun.plural}}'.
-     <br>
-     This is correct answer!
-   </div>
-   <div ng-hide="answerNoun.correct" class="alert alert-danger" role="alert">
-     Your answer is '{{answerNoun.article}}' and '{{answerNoun.plural}}',
-     <br>
-     correct answer is '{{word.article}}' and '{{word.plural}}'
+   <div class="row">
+     <div class="col-sm-4"></div>
+     <div class="col-sm-4 text-center">
+       <div ng-show="answerNoun.correct" class="alert alert-success" role="alert">
+         Your answer is '{{answerNoun.article}}' and '{{answerNoun.plural}}'.
+         <br>
+         This is correct answer!
+       </div>
+       <div ng-hide="answerNoun.correct" class="alert alert-danger" role="alert">
+         Your answer is '{{answerNoun.article}}' and '{{answerNoun.plural}}',
+         <br>
+         correct answer is '{{word.article}}' and '{{word.plural}}'
+       </div>
+     </div>
+     <div class="col-sm-4"></div>
    </div>
  </div>
 </div>
