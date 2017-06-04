@@ -27,7 +27,7 @@
        <div class="col-sm-3"></div>
        <div class="col-sm-6">
          <input type="text" name="answerPlural" ng-model="answerNoun.plural" ng-trim="true"
-                 ng-init="answerNoun.plural=''" class="answer-input" placeholder="Enter plural form">
+                 ng-init="answerNoun.plural=''" class="answer-input" translate-attr="{ placeholder: 'ENTER_PLURAL' }" />
         <div style="height: 20px"></div>
       </div>
         <div class="col-sm-3"></div>
@@ -36,7 +36,8 @@
       <div class="row">
         <div class="col-sm-4"></div>
         <div class="col-sm-4 text-center">
-          <a class="btn btn-primary main-btn" ng-click="checkAnswerNoun(answerNoun); isLessonCompleted()" >Verify</a>
+          <a translate class="btn btn-primary main-btn"
+              ng-click="checkAnswerNoun(answerNoun); isLessonCompleted()">{{'VERIFY_BUTTON_TEXT'}}</a>
         </div>
         <div class="col-sm-4"></div>
       </div>
@@ -48,14 +49,14 @@
      <div class="col-sm-4"></div>
      <div class="col-sm-4 text-center">
        <div ng-show="answerNoun.correct" class="alert alert-success" role="alert">
-         Your answer is '{{answerNoun.article}}' and '{{answerNoun.plural}}'.
+         <p translate="YOUR_NOUN_ANSWER_IS" translate-values="{ article: answerNoun.article, plural: answerNoun.plural}"></p>
          <br>
-         This is correct answer!
+         <p translate="THIS_IS_CORRECT_ANSWER"></p>
        </div>
        <div ng-hide="answerNoun.correct" class="alert alert-danger" role="alert">
-         Your answer is '{{answerNoun.article}}' and '{{answerNoun.plural}}',
+         <p translate="YOUR_NOUN_ANSWER_IS" translate-values="{ article: answerNoun.article, plural: answerNoun.plural}"></p>
          <br>
-         correct answer is '{{word.article}}' and '{{word.plural}}'
+         <p translate="CORRECT_NOUN_ANSWER_IS" translate-values="{ article: word.article, plural: word.plural}"></p>
        </div>
      </div>
      <div class="col-sm-4"></div>

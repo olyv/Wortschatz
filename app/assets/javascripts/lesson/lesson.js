@@ -1,5 +1,6 @@
-wortschatzApp.controller('LessonCtrl', ['$scope', '$uibModal', '$timeout', 'lessonItems', 'answerCounter', '$routeParams',
-  function($scope, $uibModal, $timeout, lessonItems, answerCounter) {
+wortschatzApp.controller('LessonCtrl',
+  ['$scope', '$uibModal', '$timeout', '$translate', 'lessonItems', 'answerCounter', '$routeParams',
+  function($scope, $uibModal, $timeout, $translate, lessonItems, answerCounter) {
 
     $scope.active = 0;
     $scope.noWrapSlides = false;
@@ -109,7 +110,7 @@ wortschatzApp.factory('lessonItems', function($q, $timeout, $http) {
     var LessonItems = {
         fetch: function(callback) {
             return $timeout(function() {
-                return $http.get('/new_lesson').then(function(response) {
+                return $http.get('/new_lesson/').then(function(response) {
                     return response.data;
                 });
             }, 5);

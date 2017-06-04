@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', :group => [:development, :test]
-gem 'mysql2', :group => [:production]
+gem 'mysql2', '~> 0.4.4', :group => [:production]
 # Use SCSS for stylesheets
 gem 'sass-rails' #, '~> 5.0'
 
@@ -35,3 +35,5 @@ gem 'spring',      :group => [:development]
 gem "passenger", "4.0.18" #, require: "phusion_passenger/rack_handler"
 
 gem 'rack', '~> 1.6'
+
+gem 'i18n', '~> 0.8.1'

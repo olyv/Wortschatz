@@ -15,21 +15,27 @@ ActiveRecord::Schema.define(version: 20160530183844) do
 
   create_table "adjectives", force: :cascade do |t|
     t.string "word"
-    t.string "translation"
+    t.string "en_translation"
+    t.string "ru_translation"
+    t.string "pl_translation"
   end
 
   create_table "nouns", force: :cascade do |t|
     t.string "word"
-    t.string "translation"
     t.string "article"
     t.string "plural"
+    t.string "en_translation"
+    t.string "ru_translation"
+    t.string "pl_translation"
   end
 
   create_table "verbs", force: :cascade do |t|
     t.string "word"
-    t.string "translation"
     t.string "auxverb"
     t.string "partizip"
+    t.string "en_translation"
+    t.string "pl_translation"
+    t.string "ru_translation"
   end
 
 end

@@ -58,7 +58,6 @@ Rails.application.routes.draw do
 
     get 'new_lesson' => 'lesson'
 
-
   # resources :posts, only: [:create, :index, :show] do
   #   resources :comments, only: [:show, :create] do
   #     member do

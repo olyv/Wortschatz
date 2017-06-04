@@ -24,7 +24,7 @@
        <div class="col-sm-3"></div>
        <div class="col-sm-6">
          <input type="text" name="answerPartizip" ng-model="answerVerb.partizip" ng-trim="true"
-                 ng-init="answerVerb.partizip=''" class="answer-input" placeholder="Enter partizip II">
+                 ng-init="answerVerb.partizip=''" class="answer-input" translate-attr="{ placeholder: 'ENTER_PARTIZIP' }">
         <div style="height: 20px"></div>
       </div>
         <div class="col-sm-3"></div>
@@ -33,7 +33,8 @@
       <div class="row">
         <div class="col-sm-4"></div>
         <div class="col-sm-4 text-center">
-          <a class="btn btn-primary main-btn" ng-click="checkAnswerVerb(answerVerb); isLessonCompleted()">Verify</a>
+          <a translate class="btn btn-primary main-btn"
+              ng-click="checkAnswerVerb(answerVerb); isLessonCompleted()">{{'VERIFY_BUTTON_TEXT'}}</a>
         </div>
         <div class="col-sm-4"></div>
       </div>
@@ -45,15 +46,14 @@
      <div class="col-sm-4"></div>
      <div class="col-sm-4 text-center">
        <div ng-show="answerVerb.correct" class="alert alert-success" role="alert">
-         Your answer is '{{answerVerb.auxverb}} {{answerVerb.partizip}}'.
+         <p translate="YOUR_VERB_ANSWER_IS" translate-values="{ auxverb: answerVerb.auxverb, partizip: answerVerb.partizip}"></p>
          <br>
-         This is correct answer!
+         <p translate="THIS_IS_CORRECT_ANSWER"></p>
        </div>
-       <!-- <div ng-hide="answerVerb.correct" class="alert alert-danger" role="alert"> -->
-         <div ng-hide="answerVerb.correct" class="alert alert-danger" role="alert">
-         Your answer is '{{answerVerb.auxverb}} {{answerVerb.partizip}}',
+       <div ng-hide="answerVerb.correct" class="alert alert-danger" role="alert">
+         <p translate="YOUR_VERB_ANSWER_IS" translate-values="{ auxverb: answerVerb.auxverb, partizip: answerVerb.partizip }"></p>
          <br>
-         correct answer is '{{word.auxverb}} {{word.partizip}}'
+         <p translate="CORRECT_VERB_ANSWER_IS" translate-values="{ auxverb: word.auxverb, partizip: word.partizip }"></p>
        </div>
      </div>
      <div class="col-sm-4"></div>

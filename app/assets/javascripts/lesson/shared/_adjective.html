@@ -13,7 +13,7 @@
        <div class="col-sm-3"></div>
        <div class="col-sm-6">
         <input type="text" name="answerAdjective" ng-model="answerAdjective.translation" ng-trim="true"
-                ng-init="answerAdjective.translation=''" class="answer-input" placeholder="Enter translation">
+                ng-init="answerAdjective.translation=''" class="answer-input" translate-attr="{ placeholder: 'ENTER_TRANSLATION' }">
         <div style="height: 20px"></div>
       </div>
         <div class="col-sm-3"></div>
@@ -22,7 +22,8 @@
     <div class="row">
       <div class="col-sm-4"></div>
       <div class="col-sm-4 text-center">
-        <a class="btn btn-primary main-btn" ng-click="checkAnswerAdjective(answerAdjective); isLessonCompleted()">Verify</a>
+        <a translate class="btn btn-primary main-btn"
+            ng-click="checkAnswerAdjective(answerAdjective); isLessonCompleted()">{{'VERIFY_BUTTON_TEXT'}}</a>
       </div>
       <div class="col-sm-4"></div>
     </div>
@@ -33,14 +34,14 @@
    <div class="col-sm-4"></div>
    <div class="col-sm-4 text-center">
      <div ng-show="answerAdjective.correct" class="alert alert-success" role="alert">
-       Your answer is '{{answerAdjective.translation}}'.
+       <p translate="YOUR_ANSWER_IS" translate-value-answer="{{answerAdjective.translation}}"></p>
        <br>
-       This is correct answer!
+       <p translate="THIS_IS_CORRECT_ANSWER"></p>
      </div>
      <div ng-hide="answerAdjective.correct" class="alert alert-danger" role="alert">
-           Your answer is '{{answerAdjective.translation}}',
+           <p translate="YOUR_ANSWER_IS" translate-value-answer="{{answerAdjective.translation}}"></p>
            <br>
-           correct answer is '{{word.translation}}'
+           <p translate="CORRECT_ANSWER_IS" translate-value-answer="{{word.translation}}"></p>
      </div>
    </div>
    <div class="col-sm-4"></div>
