@@ -1,4 +1,4 @@
-INSERT INTO Verbs (word, auxverb, partizip, en_translation, pl_translation, ru_translation) VALUES
+INSERT INTO verbs (word, auxverb, partizip, en_translation, pl_translation, ru_translation) VALUES
 ('gehen','ist','gegangen','to walk','chodzić','ходить'),
 ('kochen','hat','gekocht','to cook','gotować','готовить (пищу)'),
 ('vergessen','hat','vergessen','to forget','zapominać','забывать'),

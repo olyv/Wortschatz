@@ -1,4 +1,4 @@
-INSERT INTO Nouns (word, plural, article, en_translation, ru_translation, pl_translation) VALUES
+INSERT INTO nouns (word, plural, article, en_translation, ru_translation, pl_translation) VALUES
 ('Hund','Hunde','der','dog','собака','pies'),
 ('Katze','Katzen','die','cat','кошка','kot'),
 ('Kind','Kinder','das','kid','ребенок','dziecko'),

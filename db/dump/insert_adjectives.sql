@@ -1,4 +1,4 @@
-INSERT INTO Adjectives (word, en_translation, ru_translation, pl_translation) VALUES
+INSERT INTO adjectives (word, en_translation, ru_translation, pl_translation) VALUES
 ('rot','red','красный','czerwony'),
 ('blau','blue','голубой','niebieski'),
 ('gut','good','хороший','dobry'),
