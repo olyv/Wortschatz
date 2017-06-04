@@ -34,7 +34,7 @@ class LessonController < ApplicationController
       result_array << (result_json_string.as_json)
     end
 
-    @nouns = Noun.order("RANDOM()").limit(3)
+    @nouns = Noun.order("RAND()").limit(3)
     logger.info("Selected #{@nouns.length} nouns from DB")
     @nouns.each do |item|
 
@@ -58,7 +58,7 @@ class LessonController < ApplicationController
       result_array << (result_json_string.as_json)
     end
 
-    @verbs = Verb.order("RANDOM()").limit(3)
+    @verbs = Verb.order("RAND()").limit(3)
     logger.info("Selected #{@verbs.length} verbs from DB")
     @verbs.each do |item|
       json_string = JSON.parse("{}")
